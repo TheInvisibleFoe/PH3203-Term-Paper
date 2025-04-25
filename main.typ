@@ -1,5 +1,5 @@
 
-#import "template.typ": *
+#import "template/template.typ": *
 
 #show: template.with(
   language: "en",
@@ -10,6 +10,9 @@
   include-declaration-of-independent-processing: false,
 )
 = Introduction
+#include "intro.typ"
 = Literature Review
-= Calculations
+#include "litrev.typ"
+= Normalized correlation function
+#include "normalcorr.typ"
 = References
