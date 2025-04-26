@@ -1,5 +1,6 @@
 
 #import "template/template.typ": *
+#import "@preview/physica:0.9.5": *
 
 #show: template.with(
   language: "en",
@@ -9,10 +10,15 @@
   department: "Physical Sciences",
   include-declaration-of-independent-processing: false,
 )
+#set math.equation(numbering: "(1)")
+#let nonum(eq) = math.equation(block: true, numbering: none, eq) 
+
 = Introduction
 #include "intro.typ"
 = Literature Review
 #include "litrev.typ"
+= EM Quantization
+#include "emquant.typ"
 = Normalized correlation function
 #include "normalcorr.typ"
 = References
