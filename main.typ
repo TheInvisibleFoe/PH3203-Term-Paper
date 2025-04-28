@@ -10,6 +10,11 @@
   department: "Physical Sciences",
   include-declaration-of-independent-processing: false,
 )
+#set page(margin: (
+  top: 3cm,
+  bottom: 2cm,
+  x: 1.5cm,
+))
 #set math.equation(numbering: "(1)")
 #let nonum(eq) = math.equation(block: true, numbering: none, eq) 
 
@@ -21,4 +26,6 @@
 #include "emquant.typ"
 = Normalized correlation function
 #include "normalcorr.typ"
+= Squeezed states
+#include "sq.typ"
 = References
