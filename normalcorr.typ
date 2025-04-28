@@ -31,4 +31,3 @@ We need to use some properties of the correlation functions.
 + *pls elaborate on this pt* If the field is nth order coherent it must satisfy the following condition $g^((j))(x_1,x_2,...,x_j, x_(j), ..., x_(1)) = 1  quad forall j<=n$. Classically we only use first order coherence to mean coherence. If the field is nth order coherent, then we get 
 $ G^((j))(x_1,x_2,...,x_j, x_(j), ..., x_(1)) = product_(i=1)^(j) G^((1))(x_i,x_i) quad forall j<=n $
     Physically this means
-
