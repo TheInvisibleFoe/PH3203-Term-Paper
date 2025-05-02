@@ -48,8 +48,8 @@
 #counter(heading).update(0)
 #set heading(numbering: "A.1 :")
 #show heading: appendix-heading
-= EM Quantization
-#include "emquant.typ"
+= Glauber Sudarshan P function
+#include "gspfunc.typ"
 = Correlation functions
 
 = Photon antibunching
