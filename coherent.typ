@@ -1,9 +1,5 @@
 
-#import "@preview/physica:0.9.5": *
-#let nonum(eq) = math.equation(block: true, numbering: none, eq) 
-#show math.equation.where(block: true): eq => {
-  block(width: 100%, inset: 0pt, align(center, eq))
-}
+#import "imports.typ":*
 To check for squeezed states we are interested in the second order correlation function. 
 The second order correlation function, with parameters $x_1,x_2$ is given by
 $ g^(2)(x_1,x_2) &= (G^((2))(x_1,x_2,x_1,x_2))/ (G^((1))(x_1,x_1) G^((1))(x_2,x_2)) \
@@ -28,14 +24,19 @@ stationary fields. So we can write the second order correlation function  for
 $t_1 = 0, t_2 = tau$ as
 $ g^(2)(tau) = g^(2)(0,tau) = expval(:N_E(0) N_E(tau):) / (expval(N_(E(0))) expval(N_(E(tau)))) $
 
+#claim("2")[
+  $ g^(2)(0) = expval(:N_E(0) N_E(0):) / (expval(N_(E(0))) expval(N_(E(0)))) $
+]
 Claim: For coherent states of light, $ g^(2)(0) = 1 $.
 
-Proof: We see that the coherent states are defined as the eigenstates of the annihilation operator $a = E^+$, where fix the electric field in some polarization direction. So we can write
+*Proof*: We see that the coherent states are defined as the eigenstates of the annihilation operator $a = E^+$, where fix the electric field in some polarization direction. So we can write
 $ a ket(alpha) = alpha ket(alpha) $ where $alpha$ is a complex number. 
 We can now calculate 
 $ g^2(0)& =  expval(:N_E(x,0):)/expval(N_E(x,0))^2  
         quad =  expval(:a^dagger a a^dagger a:)/expval(a^dagger a)^2 \
         & =  expval(a^dagger a^dagger a a)/expval(a^dagger a)^2 
-        quad  =  (bra(alpha) a^dagger a^dagger a a ket(alpha))/(|alpha|^2) \
-        & =  (|alpha|^2) /(|alpha|^2) = 1\
+        quad  =  (bra(alpha) a^dagger a^dagger a a ket(alpha))/(|alpha|^2) 
+         =  (|alpha|^2) /(|alpha|^2) = 1\
         $
+      
+#h(1fr) #qe

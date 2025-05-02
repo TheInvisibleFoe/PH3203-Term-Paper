@@ -1,7 +1,7 @@
 
 #import "template/template.typ": *
-#import "@preview/physica:0.9.5": *
-
+#import "@preview/ctheorems:1.1.3": *
+#show: thmrules
 #show: template.with(
   language: "en",
   title-en: "Squeezed States of Light",
@@ -17,15 +17,39 @@
 ))
 #set math.equation(numbering: "(1)")
 #let nonum(eq) = math.equation(block: true, numbering: none, eq) 
+#let appendix-heading(it) = {
+  set align(center)
+  it
+  line(length: 100%, stroke: 1pt)
+  v(1em)
+}
+
+#let appendix(body) = {
+  set heading(numbering: "A.1 :", supplement: [Annexe])
+  show heading: appendix-heading
+  counter(heading).update(0)
+  body
+}
 
 = Introduction
 #include "intro.typ"
 = Literature Review
 #include "litrev.typ"
-= EM Quantization
-#include "emquant.typ"
 = Normalized correlation function
 #include "normalcorr.typ"
-= Squeezed states
-#include "sq.typ"
+== Coherent States
+#include "coherent.typ"
+= Squeezed States
+= Production of Squeezed States
+= Detection of Squeezed States
+= Applications of Squeezed States
 = References
+
+#counter(heading).update(0)
+#set heading(numbering: "A.1 :")
+#show heading: appendix-heading
+= EM Quantization
+#include "emquant.typ"
+= Correlation functions
+
+= Photon antibunching
