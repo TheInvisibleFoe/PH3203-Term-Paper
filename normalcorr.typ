@@ -1,6 +1,7 @@
 
 #import "imports.typ":*
 
+PAM Dirac first put forth the quantization of the EM field into decoupled harmonic oscillators. A full derivation can be found in  @Dirac1958. We use the same operators, just using different notation from his derivations.
 We have already seen that we quantize our electric field as,
 $ bold(E) (r,t) = bold(E)^+(r,t) + bold(E)^-(r,t) $
 where $bold(E)^+(r,t)$ is the positive frequency part and $bold(E)^-(r,t)$ is the negative frequency part. We will define some semblance of what coherence is in Quantum Optics. To do this we define the first order correlation function as 

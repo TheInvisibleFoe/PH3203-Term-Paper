@@ -24,15 +24,17 @@ stationary fields. So we can write the second order correlation function  for
 $t_1 = 0, t_2 = tau$ as
 $ g^(2)(tau) = g^(2)(0,tau) = expval(:N_E(0) N_E(tau):) / (expval(N_(E(0))) expval(N_(E(tau)))) $
 
-#claim("2")[
-  $ g^(2)(0) = expval(:N_E(0) N_E(0):) / (expval(N_(E(0))) expval(N_(E(0)))) $
+#claim("Correlation function for coherent states")[
+
+  For coherent states of the electric field, which are the eigenstates of the 
+  $hat(a) = bold(E)^+$ operator.
+  $ g^((2))(0) = 1 $
 ]
-Claim: For coherent states of light, $ g^(2)(0) = 1 $.
 
 *Proof*: We see that the coherent states are defined as the eigenstates of the annihilation operator $a = E^+$, where fix the electric field in some polarization direction. So we can write
 $ a ket(alpha) = alpha ket(alpha) $ where $alpha$ is a complex number. 
 We can now calculate 
-$ g^2(0)& =  expval(:N_E(x,0):)/expval(N_E(x,0))^2  
+$ g^((2))(0)& =  expval(:N_E(x,0):)/expval(N_E(x,0))^2  
         quad =  expval(:a^dagger a a^dagger a:)/expval(a^dagger a)^2 \
         & =  expval(a^dagger a^dagger a a)/expval(a^dagger a)^2 
         quad  =  (bra(alpha) a^dagger a^dagger a a ket(alpha))/(|alpha|^2) 
@@ -40,3 +42,25 @@ $ g^2(0)& =  expval(:N_E(x,0):)/expval(N_E(x,0))^2
         $
       
 #h(1fr) #qe
+
+For short counting times, the time delay in the second order correlation function is 
+$tau = 0$.
+#claim("Variance")[
+
+  For sufficiently short counting times, the variance of the photon number distribution $V(n)$ is related to $g^((2))(0)$ by the relation
+  $ (V(n) - expval(n))/expval(n)^2  = g^((2))(0)-1 $
+]
+*Proof*: Note that $N_E(x,0) = n$, which the photon number operator. Then the variance 
+is given by 
+$V(n) = expval(n^2) - expval(n)^2$
+The second order correlation function is given by $ g^((2))(0) = (expval(:n^2:))/(expval(n)^2) $ Let us focus on the numerator, $expval(:n^2:) = expval(a^dagger a^dagger a a) = expval(a^dagger n a)$. We use the commutator relation $[n,a] = -a$ to get 
+$ expval(:n^2:) = expval(a^dagger n a) = expval(a^dagger a^dagger a a) - expval(a^dagger a) = expval(n^2) - expval(n)$
+Thus we get, from the definition of variance and the second order correlation function,
+$ & g^((2))(0) = (expval(n^2) - expval(n))/(expval(n)^2) = (V(n) + expval(n)^2 - expval(n))/expval(n)^2 \
+=> & g^((2))(0) - 1 = (V(n) - expval(n))/expval(n)^2 \
+$
+#h(1fr) #qe
+
+We know that photon statistics in the coherent state is poissonian. For poissonian
+statistics, the variance is given by $V(n) = expval(n)$. So for poissonian statistics,
+we have $g^((2))(0) = 1$. When $g^((0))<1$, we have sub-poissonian statistics and when $g^((2))(0)>1$, we have super-poissonian statistics. Sub-poissonian statistics exhibit an phenomenon called photon antibunching. *Write more about photon antibunching.*

@@ -30,7 +30,6 @@
   counter(heading).update(0)
   body
 }
-
 = Introduction
 #include "intro.typ"
 = Literature Review
@@ -40,10 +39,11 @@
 == Coherent States
 #include "coherent.typ"
 = Squeezed States
+#include "sq.typ"
 = Production of Squeezed States
 = Detection of Squeezed States
 = Applications of Squeezed States
-= References
+#bibliography("refs.bib")
 
 #counter(heading).update(0)
 #set heading(numbering: "A.1 :")
