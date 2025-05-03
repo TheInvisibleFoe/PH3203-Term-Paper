@@ -4,6 +4,17 @@
 #show: thmrules
 #let qe = $suit.club.filled$
 
+#let squeezed = $ket(alpha comma zeta)$
+#let Oad = $hat(a)^dagger$
+#let Oa = $hat(a)$
+#let Obd = $hat(b)^dagger$
+#let Ob = $hat(b)$
+#let Os = $hat(S)(zeta)$
+#let Osd = $hat(S)(zeta)^dagger$
+#let Od = $hat(D)(alpha)$
+#let Odd = $hat(D)(alpha)^dagger$
+#let On = $hat(n)$
+
 // Define theorem environments
 
 #let theorem = thmbox(
