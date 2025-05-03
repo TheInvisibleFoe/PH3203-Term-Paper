@@ -32,8 +32,6 @@
 #set heading(numbering: numbly("{1}.", default: "1.1"))
 
 #title-slide()
-= Introduction
-= Literature Review
 = A Primer
 == Correlation Functions
 
@@ -115,9 +113,9 @@ $tau = 0$.
 
 We know that photon statistics in the coherent state is poissonian. For poissonian
 statistics, the variance is given by $V(n) = expval(n)$. So for poissonian statistics,
-we have $g^((2))(0) = 1$. When $g^((0))<1$, we have sub-poissonian statistics and when $g^((2))(0)>1$, we have super-poissonian statistics. Sub-poissonian statistics exhibit a phenomenon called photon antibunching. 
+we have $g^((2))(0) = 1$. When $g^((2))(0)<1$, we have sub-poissonian statistics and when $g^((2))(0)>1$, we have super-poissonian statistics. Sub-poissonian statistics exhibit a phenomenon called photon antibunching. 
 = Squeezed States
-== Intro
+== Introduction
 The time dependent electric field operator is some specififc polarization direction for one single mode is given by @Dirac1958:
 $ E(t) = lambda (hat(a)e^(-i omega t) + hat(a)^dagger e^(i omega t)) $ where $lambda$ is a constant that contains information about the spatial wave functions. For more modes, we add up multiple different hilbert spaces of SHO, with different frequencies. We then write 
 $ a = X_1 + i X_2 $ where we can see from the SHO equations, $X_1$ and $X_2$ are rescaled versions of the position and momentum operators, which obey the commutation relation $[X_1, X_2] = i/2$. We can then write the electric field operator as
@@ -182,7 +180,7 @@ $
 hat(n) = Oad Oa
 $
 
-Now, to compute the epectation of $hat(n)$ in the Squeezed state we have to evaluate the following
+Now, to compute the expectation of $hat(n)$ in the Squeezed state we have to evaluate the following
 expression
 $
 expval(On) &= braket(0, Osd Odd Oad Oa Od Os, 0) \
@@ -251,7 +249,7 @@ It can be shown using induction that,
 $
 [A, Oa]_n = cases(
               -zeta abs(zeta)^(n - 1) Oad &&"if" n "is odd",
-              abs(zeta)^n Oad &&"if" n "is even",
+              abs(zeta)^n Oa &&"if" n "is even",
             )
 $
 Then we can evaluate $Osd Oa Os$ to be,
@@ -366,6 +364,121 @@ $
 
 Thus we can see that we will always observe photon bunching in the squeezed state, in the limit of $alpha << 1$.
 
+#pagebreak()
+If we evaluate in the limit of $alpha >> 1$, then we see bunching or anti bunching 
+depending on the value of $r$.
+== Production of Squeezed States
+
+The production of squeezed states of light essentially requires the generation of a mixing of a particular mode of the field with its conjugate mode. This ican not be achieved by transformations offered by linear optical devices (mirror, beam splitter, phase shifter). Th only way to achieve this is through the use of nonlinear optical devices.
+
+In general, what we desire is a canonical Bogoliubov transformation of the form:
+$
+hat(b) = mu hat(a) + nu hat(a)^dagger
+$
+
+Where controlling $mu$ and $nu$ allows us to control the extent of squeezing.
+
+Phrased in other terms, what we require is a Hamiltonian that contains quadratic terms in the creation and annihilation operators of that mode. This is given in the general form:
+
+$
+H = i h/(2 pi) kappa ((hat(a)^(dagger))^2 - hat(a)^2)
+$
+
+This can be achieved through two main methods:
+
+1. Degenerate Parametric Down-Conversion ($Chi^((2))$): Here, a strong classical photon pump is used to drive a $Chi^((2))$ crystal at ssome frequency $2 omega$. this results in the creation of two photons of almost perfectly correlated phases of $omega$, and the process gives us an interaction Hamiltonian of the form mentioned above. The extent of squeezing is controlled by the non-linear susceptibility of the crystal used.
+2. Degenerate 4-wave mixing ($Chi^((3))$): Same as the previous method, but in this case we use two photon pumps to drive the crystal with two photons of some frequency $omega$. This generates two photons that are again nearly perfectly correlated in phase. This gives us a nearly identical interaction Hamiltonian and the same Bogoliubov transformation as before.
+
+= Detection
+== Basic idea of the detection
+
+The measure and characterise the quadrature squeezing of the light field, we must be able to perform phase-sensitive measurements of the field operators:
+
+$
+hat(X_(theta)) = 1/2 (e^(-i theta) hat(a) + e^(i theta) hat(a^dagger))
+$
+
+Where $hat(a)$ is the signal mode's annihilation operator, and $theta$ is a tunable phase that decides the quadrature that is to be measured.
+
+Two of the basic techniques that are used for the detection of the squeezed states that are discussed in the paper involve using a strong local oscillator (hereby referred to as LO) to procude a coherent state $|beta e^(i theta)>$ with $beta >> 1$, and using it to perform a homodyne or a heterodyne measurement of the signal. this process involves the mixing of the singal moed with the LO mode using a 50/50 beam splitter, the action of which is represented by the following transformation:
+
+$
+mat(hat(c);hat(d)) = 1/(sqrt(a)) mat(1,1;1,-1) mat(hat(a);hat(b))
+$
+
+This yields the modes:
+
+$
+hat(c) = 1/(sqrt(2)) (hat(a) + hat(b))
+$
+
+$
+hat(d) = 1/(sqrt(2)) (hat(a) - hat(b))
+$
+
+Where $hat(a)$ is the signal mode, and $hat(b)$ is the LO mode. The output modes are then detected using photodiodes, which essentially carry out a photon counting operation, i.e. $hat(c)^(dagger) hat(c)$ and $hat(d)^(dagger) d$.
+
+== Homodyne detection
+In this mode, the LO mode is prepared in the same frequency as the signal mode $omega$, and the phase $theta$ is varied. The difference in the photocurrent produced by the two photodiodes is given by:
+$
+hat(N_(-)) = hat(c)^(dagger) hat(c) - hat(d)^(dagger) hat(d) = hat(a)^(dagger) hat(b) + hat(b)^(dagger) hat(a)
+$
+In the strong LO approximation limit, $<hat(b)> = beta e^(- theta)$, and one can replace the $hat(b)$ operators with their expectation values. This yields:
+$
+hat(N_(-)) approx 2 |beta| hat(X_(theta))
+$
+
+Now, the variance in the photocurrent is given by:
+$
+V a r (hat(N_(-))) = 4 |beta|^2 <(Delta hat(X_(theta)))^2>
+$
+If we observe a variance in the different photocurrent that is less than what is expected from a coherent state, i.e. $mod(beta)^2$, we can be sure that we are observing a squeezed state. The main benefit of this method is the direct access to all quadratures by modifying the phase of the LO mode, which we can alter from $theta=0$ to $theta = pi/2$ to access the two orthogonal quadratures. The disadvantage of this method is that the LO mode must be prepared in the same frequency as the signal mode, which is not always possible. This can be a problem in cases where the signal mode is at a different frequency, such as in the case of squeezed light generated by four-wave mixing or parametric down-conversion.
+
+== Heterodyne detection
+In this method, the LO mode is prepared in a slightly different frequency of $omega + delta omega$, and the phase $theta$ is varied. One of the output modes from the beamsplitter is given by:
+$
+hat(c)(t) = 1/(sqrt(2)) (hat(a) e^(- omega t) + beta e^(-i (omega + delta omega) t))
+$
+and the intensity of the photocurrent is given by:
+$
+hat(I)(t) = 1/2 [hat(a)^(dagger) hat(a) + |beta|^2 + beta^* hat(a) e^(-i delta omega t) + beta hat(a)^(dagger) e^(i delta omega t)]
+$
+
+Electronic filtering of the photocurrent is then done to remove the high frequency terms, and the resulting signal is given by:
+$
+hat(I_(b e a t))(t) = 1/2 [beta^* hat(a) e^(-i delta omega t) + beta hat(a)^(dagger) e^(i delta omega t)]
+$
+
+This contains information about both the quadrature amplitudes, as can be seen by substituting $beta = |beta| e^(i theta)$ to get;
+
+$
+hat(I_(b e a t))(t) = |beta| [hat(X_1) cos(delta omega t) + hat(X_2) sin(delta omega t)]
+$
+
+Demmodulation of this signal gives us the quadrature amplitudes, and thus the variances - and if we detect that any of them are less than the coherent state limit we can be sure that we have observed a squeezed state. The main advantage of this method is that the LO mode does not need to be prepared in the same frequency as the signal mode, which makes it more versatile. However, the disadvantage is that we do not have direct access to all quadratures, and we need to demodulate the signal to obtain the quadrature amplitudes.
+
+= Applications
+
+== Quantum-Noise–Limited Interferometry
+
+High-precision interferometric measurements (e.g.\ gravitational-wave detectors, cavity-length stabilization) are fundamentally limited by quantum shot noise and radiation-pressure back-action.  Injecting squeezed vacuum into the interferometer's unused port reduces fluctuations in the pertinent quadrature, thereby lowering the noise floor.  Caves (1981) showed that a squeeze parameter $r$ yields a noise reduction factor of $e^(-r)$ in the shot-noise-dominated regime. Modern large-scale detectors (GEO600, Advanced LIGO) routinely employ >3 dB of injected squeezing to improve strain sensitivity below the standard quantum limit .
+
+== Phase-Sensitive Amplification
+
+Conventional, phase-insensitive amplifiers must add at least half a quantum of noise per quadrature.  In contrast, a *phase-sensitive parametric amplifier* based on a $chi^((2))$ or $chi^((3))$ nonlinearity can amplify one quadrature without excess added noise by locking to the squeezed quadrature. 
+
+== Optical Communication Channels
+
+Yuen and Shapiro @Yuen1978 first proposed encoding information in a squeezed-quadrature field to surpass the classical Shannon limit imposed by coherent-state (shot-noise) channels.  By modulating the squeezed quadrature and homodyning at the receiver, one can achieve a signal-to-noise ratio increased by a factor $e^(2r)$ over a coherent-state channel for the same mean photon number . 
+
+
+== Optical Waveguide Taps and Quantum-Limited Routing
+
+Shapiro @Shapiro1980 showed that tapping an optical waveguide with a squeezed-state probe can extract a portion of the signal with arbitrarily low back-action when the probe is squeezed in the appropriate quadrature.  This *optical waveguide tap* enables non-invasive monitoring of guided signals over multikilometer networks without intermediate optical amplifiers, offering a route to quantum-enhanced data buses and sensing arrays .
+
+// == Continuous-Variable Quantum Information and Metrology
+
+// Two-mode squeezed states serve as a primary resource for continuous-variable entanglement, which underpins protocols in quantum teleportation, key distribution, and cluster-state computing.  The degree of entanglement scales directly with the squeeze parameter $r$, enabling high-fidelity information processing.  In quantum metrology, injecting squeezed probes into sensing interferometers achieves phase-estimation sensitivity $Delta phi prop e^(-r)/sqrt(N)$, surpassing the standard quantum limit by a factor $e^(-r)$ for $N$ average photons.  Reviews by Braunstein & van Loock @Braunstein2005 and Weedbrook *et al.* @Weedbrook2012 provide comprehensive treatments of these protocols and experimental realizations .
 
 == Bibliography
 ---
