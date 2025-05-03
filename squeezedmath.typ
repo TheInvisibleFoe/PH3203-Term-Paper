@@ -10,7 +10,7 @@
 #let Odd = $hat(D)(alpha)^dagger$
 #let On = $hat(n)$
 === Definition of Squeezed States
-Squeezed States are defined as the state obtained by the action of the operator $Os Od$ on the vaccum
+Squeezed States are defined as the state obtained by the action of the operator $Od Os$ on the vaccum
 number state $ket(0)$
 $
 ket(alpha comma zeta) = Od Os ket(0)
@@ -29,7 +29,7 @@ $
 i.e., both the operators are unitary. This will help us a lot in the following section, where we 
 will be looking at the expectations and variances of a few relevant quantities.
 === Mean Photon Number in a Squeezed State
-We wish to compute $expval(n)$ for the squeezed state #squeezed
+We wish to compute $expval(On)$ for the squeezed state #squeezed
 
 We know that 
 $
@@ -39,7 +39,7 @@ $
 Now, to compute the epectation of $hat(n)$ in the Squeezed state we have to evaluate the following
 expression
 $
-expval(n) &= braket(0, Osd Odd Oad Oa Od Os, 0) \
+expval(On) &= braket(0, Osd Odd Oad Oa Od Os, 0) \
           &= braket(0, Osd Odd Oad Od Odd Oa Od Os, 0) && [because Odd Od = 1]\
           &= braket(0, Osd Odd Oad Od Os Osd Odd Oa Od Os, 0) && [because Osd Os = 1]\
 $
@@ -76,9 +76,9 @@ Odd Oad Od = alpha^* + Oad
 $
 
 Now substituting these expressions for $Odd Oa Od$ and $Odd Oad Od$ into our expression for
-$expval(n)$ we get,
+$expval(On)$ we get,
 $
-expval(n) &= braket(0,Osd (Oad + alpha^*) Os Osd (Oa + alpha) Os ,0)\
+expval(On) &= braket(0,Osd (Oad + alpha^*) Os Osd (Oa + alpha) Os ,0)\
           &= braket(0,(Osd Oad Os + alpha^*) (Osd Oa Os + alpha) ,0) && [because Osd Os = 1]\
 $
 So, now we compute $Osd Oa Os$. Let us define $A = frac(1, 2)(zeta Oad^2 - zeta^* Oa^2)$. Then,
@@ -124,15 +124,15 @@ $
 Osd Oad Os = Oad cosh(r) - Oa e^(-i theta)sinh(r)
 $
 
-Substituting these expressions into the expression for $expval(n)$ we get,
+Substituting these expressions into the expression for $expval(On)$ we get,
 $
-expval(n) &= braket(0, (Oad cosh(r) - Oa e^(-i theta)sinh(r) + alpha^*)(Oa cosh(r) - Oad e^(i theta)sinh(r) + alpha),0)\
+expval(On) &= braket(0, (Oad cosh(r) - Oa e^(-i theta)sinh(r) + alpha^*)(Oa cosh(r) - Oad e^(i theta)sinh(r) + alpha),0)\
           &= braket(0,abs(alpha)^2 + Oa Oad sinh^2(r) ,0)\
           &= abs(alpha)^2 + sinh^2(r)
 $
 Hence for a squeezed state, the mean photon number is given by
 $
-expval(n) = abs(alpha)^2 + sinh^2(r)
+expval(On) = abs(alpha)^2 + sinh^2(r)
 $
 === Variances in Squeezed States
 Let us define $Y_1$ and $Y_2$ such that, $Y_1 + i Y_2 = (X_1 + X_2)e^(-i theta / 2) := Ob$. 
@@ -140,7 +140,7 @@ Then, we have $Ob = Oa e^(-i theta / 2)$. And we also have,
 $
 Os = e^(1/2 (Ob^2 - Obd^2))
 $
-Observe that, $Obd Ob = Oad Oa = On$ and $[Obd, Ob] = [Oa, Oa] = 1$
+Observe that, $Obd Ob = Oad Oa = On$ and $[Obd, Ob] = [Oad, Oa] = 1$
 Also, lets define $beta = alpha e^(- theta / 2)$
 
 Let's compute $var(Y_1)$ and $var(Y_2)$ for the squeezed state $ket(alpha comma zeta)$
