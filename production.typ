@@ -5,6 +5,9 @@ $
 hat(b) = mu hat(a) + nu hat(a)^dagger
 $
 
+With the constraint that $|mu|^2 - |nu|^2 = 1$.
+This transformation is a linear transformation of the creation and annihilation operators of the mode $hat(a)$, which is the mode we are interested in. The $hat(b)$ operator is the new mode that we are creating through this transformation. The $mu$ and $nu$ terms are complex numbers that determine the extent of mixing between the two modes. The constraint ensures that the transformation preserves the bosonic commutation relations - which means that $hat(b)$ and $hat(b)^dagger$ still satisfy the commutation relations that the original operators $hat(a)$ and $hat(a)^dagger$ satisfied. This is important because it ensures that the new mode $hat(b)$ behaves like a bosonic mode, just like the original mode $hat(a)$.
+
 Where controlling $mu$ and $nu$ allows us to control the extent of squeezing.
 
 Phrased in other terms, what we require is a Hamiltonian that contains quadratic terms in the creation and annihilation operators of that mode. This is given in the general form:
