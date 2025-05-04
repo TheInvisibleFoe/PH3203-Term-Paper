@@ -2,7 +2,7 @@
 
 == Quantum-Noise–Limited Interferometry
 
-High-precision interferometric measurements (e.g. gravitational-wave detectors, cavity-length stabilization) are fundamentally limited by quantum shot noise and radiation-pressure back-action.  Injecting squeezed vacuum into the interferometer's unused port reduces fluctuations in the pertinent quadrature, thereby lowering the noise floor.  Caves (1981) showed that a squeeze parameter $r$ yields a noise reduction factor of $e^(-r)$ in the shot-noise-dominated regime. 
+High-precision interferometric measurements (e.g. gravitational-wave detectors, cavity-length stabilization) are fundamentally limited by quantum shot noise and radiation-pressure back-action.  Injecting squeezed vacuum into the interferometer's unused port reduces fluctuations in the pertinent quadrature, thereby lowering the noise floor. 
 
 == Phase-Sensitive Amplification
 

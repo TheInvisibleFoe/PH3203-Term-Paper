@@ -76,6 +76,7 @@ $ V(X_1) = expval(X_1^2) - expval(X_1)^2 &= 1/4 [1 + integral d^2 alpha P(alpha)
 expval(a^dagger))^2 - 2( alpha + alpha^*)(expval(a) + expval(a^dagger)])\
 &= 1/4 [1 + integral d^2 alpha P(alpha) {(alpha + alpha^*) - (expval(a) + expval(a^dagger))}^2] 
 $
+#h(1fr) #qe
 
 We know that a squeezed has $V(X_1)<1/4$ in one quadrature, and $V(X_2)>1/4$ in the other quadrature. We can see that the squeezed state has a negative P function, which is a signature of nonclassicality.
 

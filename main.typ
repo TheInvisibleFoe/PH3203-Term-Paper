@@ -48,6 +48,7 @@
 #include "application.typ"
 #bibliography("refs.bib")
 
+#pagebreak()
 #counter(heading).update(0)
 #set heading(numbering: "A.1 :")
 #show heading: appendix-heading
