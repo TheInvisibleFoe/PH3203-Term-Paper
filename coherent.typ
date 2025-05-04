@@ -63,4 +63,4 @@ $
 
 We know that photon statistics in the coherent state is poissonian. For poissonian
 statistics, the variance is given by $V(n) = expval(n)$. So for poissonian statistics,
-we have $g^((2))(0) = 1$. When $g^((0))<1$, we have sub-poissonian statistics and when $g^((2))(0)>1$, we have super-poissonian statistics. Sub-poissonian statistics exhibit an phenomenon called photon antibunching. *Write more about photon antibunching.*
+we have $g^((2))(0) = 1$. When $g^((0))<1$, we have sub-poissonian statistics and when $g^((2))(0)>1$, we have super-poissonian statistics. Sub-poissonian statistics exhibit an phenomenon called photon antibunching. 

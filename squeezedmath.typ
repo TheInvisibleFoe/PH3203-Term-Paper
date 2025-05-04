@@ -35,7 +35,7 @@ $
 expval(On) = abs(alpha)^2 + sinh^2(r)
 $
 ]
-We wish to compute $expval(On)$ for the squeezed state #squeezed
+*Proof:* We wish to compute $expval(On)$ for the squeezed state #squeezed
 
 We know that 
 $
@@ -208,7 +208,7 @@ $
 From these fluctuations we can clearly see that the amplitude is decaying exponentially in one of
 the quadratures while, increasing in the other one at the same rate, with $r$. Also, the fluctuations 
 are independent of $alpha$.
-
+#h(1fr) #qe
 == Second Order Correlation Function for the Squeezed State
 #claim("Second Order Correlation Function for the Squeezed State")[
 
@@ -240,6 +240,7 @@ Hence, the correlation function turns out to be
 $
 g^((2))(0) = frac(abs(alpha)^4 + 3sinh^4(r) + (1 + 2abs(alpha)^2)sinh^2(r) - Re(alpha^2 e^(-i theta))sinh(2r), (abs(alpha)^2 + sinh^2(r))^2)
 $
+#h(1fr)#qe
 
 Now, we will discuss two limiting conditions for this expression.
 
