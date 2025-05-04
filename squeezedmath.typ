@@ -20,7 +20,7 @@ $
 Od &= e^(-abs(alpha)^2 / 2) e^(alpha Oad) e^(-alpha^* Oa) \
 Os &=  e^(1/2 (zeta^*Oa^2 - zeta Oad^2))
 $
-where, $zeta = r e^(i theta)$ with $r > 0$.
+where, $zeta = r e^(i theta)$ with $r > 0$, and $alpha = abs(alpha)e^(i phi)$.
 
 $Od$ and $Os$ are the translation and the squeeze operator respectively. It can be shown that,
 $
@@ -209,14 +209,14 @@ expval(:On^2:) &= expval(Oad Oad Oa Oa)\
                &= braket(0, Osd (alpha* + Oad) Os Osd (alpha* + Oad) Os Osd (alpha + Oa) Os Osd (alpha + Oa) Os) \
                &= braket(0, (Oad cosh(r) - e^(-i theta) Oa sinh(r) + alpha^*)^2(Oa cosh(r) - e^(i theta)Oad sinh(r) + alpha)^2 ,0) \
                &= braket(0, Oa Oad Oa Oad sinh^2(r)cosh^2(r) + Oa Oa Oad Oad sinh^4(r) \
-               &+ Oa Oad (2abs(alpha)^2sinh^2(r) - (alpha^2e^(-i theta) + (alpha^*)^2e^(i theta))sinh(r)cosh(r)),0)\
+               &+ Oa Oad (2abs(alpha)^2sinh^2(r) - (alpha^2e^(-i theta) + (alpha^*)^2e^(i theta))sinh(r)cosh(r)) + abs(alpha)^4,0)\
                &= 2sinh^4(r) + sinh^2(r)cosh^2(r) + 2abs(alpha)^2sinh^2(r) - (alpha^2e^(- i theta)+ (alpha^*)^2e^(i theta))sinh(r)cosh(r)\
-               &= 3sinh^4(r) + (1 + 2abs(alpha)^2)sinh^2(r) - Re(alpha^2 e^(-i theta))sinh(2r)
+               &= 3sinh^4(r) + (1 + 2abs(alpha)^2)sinh^2(r) - Re(alpha^2 e^(-i theta))sinh(2r) + abs(alpha)^4
 $
 
 Hence, the correlation function turns out to be
 $
-g^((2))(0) = frac(3sinh^4(r) + (1 + 2abs(alpha)^2)sinh^2(r) - Re(alpha^2 e^(-i theta))sinh(2r), (abs(alpha)^2 + sinh^2(r))^2)
+g^((2))(0) = frac(abs(alpha)^4 + 3sinh^4(r) + (1 + 2abs(alpha)^2)sinh^2(r) - Re(alpha^2 e^(-i theta))sinh(2r), (abs(alpha)^2 + sinh^2(r))^2)
 $
 
 Now, we will discuss two limiting conditions for this expression.
@@ -235,9 +235,9 @@ $g^((2))(0) > 1$ So, in this case we will always have photon bunching.
 Now let's look at the second limiting case, when $abs(alpha)^2 >> sinh^2(r)$
 
 $
-g^((2))(0) &= frac(3sinh^4(r) + 2abs(alpha)^2sinh^2(r) - Re(alpha^2e^(-i theta))sinh(2r), abs(alpha)^4)\
-           &= 3(frac(sinh^2(r), abs(alpha)^2))^2 + 2frac(sinh^2(r), abs(alpha)^2) - cos(2phi - theta)frac(sinh(2r), abs(alpha)^2)\
-           &approx -cos(2phi - theta)sinh(2r)/abs(alpha)^2
+g^((2))(0) &= frac(abs(alpha^4) + 3sinh^4(r) + 2abs(alpha)^2sinh^2(r) - Re(alpha^2e^(-i theta))sinh(2r), abs(alpha)^4)\
+           &= 1 + 3(frac(sinh^2(r), abs(alpha)^2))^2 + 2frac(sinh^2(r), abs(alpha)^2) - cos(2phi - theta)frac(sinh(2r), abs(alpha)^2)\
+           &approx 1-cos(2phi - theta)sinh(2r)/abs(alpha)^2
 $
 
 From this expression we can see that in this limit, if $r > 0$, we eventually get $g^((2))(0) < 1$ i.e. photon anti-bunching and sub poisonnian photon statistics,
