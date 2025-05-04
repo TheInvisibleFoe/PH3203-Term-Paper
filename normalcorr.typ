@@ -28,6 +28,5 @@ $ g^((2))(x_1,x_2,x_3,x_4) = (G^((2))(x_1,x_2,x_3,x_4))/ sqrt(G^((1))(x_1,x_1) G
 We need to use some properties of the correlation functions.
 + Permutation of the first half $(x_1,...,x_n)$ and the second half $(x_(n+1),...,x_(2n))$ individually, of the correlation function does not change the value of the correlation function. This is because when we quantize the electric field, we end up with a bunch of decoupled harmonic oscillators, so for any two oscillators the commutation relation is $[a_i,a_j^dagger] = delta_(i j)$, so the correlation function is invariant under permutation of the first half and the second half.
 
-+ *pls elaborate on this pt* If the field is nth order coherent it must satisfy the following condition $g^((j))(x_1,x_2,...,x_j, x_(j), ..., x_(1)) = 1  quad forall j<=n$. Classically we only use first order coherence to mean coherence. If the field is nth order coherent, then we get 
++ If the field is nth order coherent it must satisfy the following condition $g^((j))(x_1,x_2,...,x_j, x_(j), ..., x_(1)) = 1  quad forall j<=n$. Classically we only use first order coherence to mean coherence. If the field is nth order coherent, then we get 
 $ G^((j))(x_1,x_2,...,x_j, x_(j), ..., x_(1)) = product_(i=1)^(j) G^((1))(x_i,x_i) quad forall j<=n $
-    Physically this means
