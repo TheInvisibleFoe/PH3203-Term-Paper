@@ -9,7 +9,7 @@
 #let Od = $hat(D)(alpha)$
 #let Odd = $hat(D)(alpha)^dagger$
 #let On = $hat(n)$
-=== Definition of Squeezed States
+== Definition of Squeezed States
 Squeezed States are defined as the state obtained by the action of the operator $Od Os$ on the vaccum
 number state $ket(0)$
 $
@@ -22,13 +22,19 @@ Os &=  e^(1/2 (zeta^*Oa^2 - zeta Oad^2))
 $
 where, $zeta = r e^(i theta)$ with $r > 0$, and $alpha = abs(alpha)e^(i phi)$.
 
-$Od$ and $Os$ are the translation and the squeeze operator respectively. It can be shown that,
+$Od$ and $Os$ are the translation and the squeeze operator respectively. It can be shown that(we show that in Appendix B.),
 $
 Odd Od = Osd Os = 1
 $
 i.e., both the operators are unitary. This will help us a lot in the following section, where we 
 will be looking at the expectations and variances of a few relevant quantities.
-=== Mean Photon Number in a Squeezed State
+== Mean Photon Number in a Squeezed State
+#claim("Mean Photon Number in a Squeezed State")[
+Hence for a squeezed state, the mean photon number is given by
+$
+expval(On) = abs(alpha)^2 + sinh^2(r)
+$
+]
 We wish to compute $expval(On)$ for the squeezed state #squeezed
 
 We know that 
@@ -134,7 +140,9 @@ Hence for a squeezed state, the mean photon number is given by
 $
 expval(On) = abs(alpha)^2 + sinh^2(r)
 $
-=== Variances in Squeezed States
+
+#h(1fr) #qe
+== Variances in Squeezed States
 Let us define $Y_1$ and $Y_2$ such that, $Y_1 + i Y_2 = (X_1 + X_2)e^(-i theta / 2) := Ob$. 
 Then, we have $Ob = Oa e^(-i theta / 2)$. And we also have,
 $
@@ -143,7 +151,13 @@ $
 Observe that, $Obd Ob = Oad Oa = On$ and $[Obd, Ob] = [Oad, Oa] = 1$
 Also, lets define $beta = alpha e^(- theta / 2)$
 
-Let's compute $var(Y_1)$ and $var(Y_2)$ for the squeezed state $ket(alpha comma zeta)$
+#claim("Variance of the quadrature phase")[
+        The variance of the quadrature phase is given by
+        $ V a r(Y_1) =  var(Y_1) = 1/4 e^(-2r) $
+        $ V a r(Y_2) = var(Y_2) = 1/4 e^(2r) $
+]
+
+*Proof*: Let's compute $var(Y_1)$ and $var(Y_2)$ for the squeezed state $ket(alpha comma zeta)$
 $
 var(Y_1) &= expval(Y_1^2) - expval(Y_1)^2\
          &= 1/4 expval((Ob + Obd)^2) - expval(Ob + Obd)^2\
@@ -195,7 +209,15 @@ From these fluctuations we can clearly see that the amplitude is decaying expone
 the quadratures while, increasing in the other one at the same rate, with $r$. Also, the fluctuations 
 are independent of $alpha$.
 
-=== Second Order Correlation Function for the Squeezed State
+== Second Order Correlation Function for the Squeezed State
+#claim("Second Order Correlation Function for the Squeezed State")[
+
+The second order correlation function for the squeezed state is given by
+$
+g^((2))(0) = frac(abs(alpha)^4 + 3sinh^4(r) + (1 + 2abs(alpha)^2)sinh^2(r) - Re(alpha^2 e^(-i theta))sinh(2r), (abs(alpha)^2 + sinh^2(r))^2)
+$
+where $g^((2))(0) = expval(:On^2:) / expval(On)^2$ and $alpha$ is the parameter of displacement operator and $zeta = r e^(i theta)$, where $r>0$ is the amplitude of squeezing.
+]
 Now let us compute the second order correlation function for this state $ket(alpha comma zeta)$
 We know that,
 $
@@ -227,7 +249,8 @@ $ket(0 comma zeta)$. Then we get the following form of the correlation function.
 $
 g^((2))(0) &= frac(3sinh^4(r) + sinh^2(r), sinh^4(r))\
            &= 3 + frac(1, sinh^2(r)) \
-           &= 3 + frac(1, expval(n))
+           &= 3 + frac(1, expval(n))\
+           & = 1 + cosh(2r)/(sinh^2(r))
 $
 As we can see in the small $alpha$ limit, no matter what value of $zeta$ we choose, we always have
 $g^((2))(0) > 1$ So, in this case we will always have photon bunching.

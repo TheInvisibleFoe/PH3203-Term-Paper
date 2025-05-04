@@ -36,13 +36,16 @@
 #include "litrev.typ"
 = Normalized correlation function
 #include "normalcorr.typ"
-== Coherent States
+= Coherent States
 #include "coherent.typ"
 = Squeezed States
 #include "sq.typ"
 = Production of Squeezed States
+#include "production.typ"
 = Detection of Squeezed States
+#include "detection.typ"
 = Applications of Squeezed States
+#include "application.typ"
 #bibliography("refs.bib")
 
 #counter(heading).update(0)
@@ -50,6 +53,7 @@
 #show heading: appendix-heading
 = Glauber Sudarshan P function
 #include "gspfunc.typ"
-= Correlation functions
-
+= Unitarity of Squeeze and Displacement operators
+#include "dispsq.typ"
 = Photon antibunching
+#include "bunch.typ"
