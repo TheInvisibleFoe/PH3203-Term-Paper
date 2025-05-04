@@ -191,6 +191,10 @@ $
 var(Y_2) = 1/4 e^(2r)
 $
 
+From these fluctuations we can clearly see that the amplitude is decaying exponentially in one of
+the quadratures while, increasing in the other one at the same rate, with $r$. Also, the fluctuations 
+are independent of $alpha$.
+
 === Second Order Correlation Function for the Squeezed State
 Now let us compute the second order correlation function for this state $ket(alpha comma zeta)$
 We know that,
@@ -214,3 +218,27 @@ Hence, the correlation function turns out to be
 $
 g^((2))(0) = frac(3sinh^4(r) + (1 + 2abs(alpha)^2)sinh^2(r) - Re(alpha^2 e^(-i theta))sinh(2r), (abs(alpha)^2 + sinh^2(r))^2)
 $
+
+Now, we will discuss two limiting conditions for this expression.
+
+First we will look at the limit when $abs(alpha) << 1$, i.e., we are considering the squeezed state
+$ket(0 comma zeta)$. Then we get the following form of the correlation function.
+
+$
+g^((2))(0) &= frac(3sinh^4(r) + sinh^2(r), sinh^4(r))\
+           &= 3 + frac(1, sinh^2(r)) \
+           &= 3 + frac(1, expval(n))
+$
+As we can see in the small $alpha$ limit, no matter what value of $zeta$ we choose, we always have
+$g^((2))(0) > 1$ So, in this case we will always have photon bunching.
+
+Now let's look at the second limiting case, when $abs(alpha)^2 >> sinh^2(r)$
+
+$
+g^((2))(0) &= frac(3sinh^4(r) + 2abs(alpha)^2sinh^2(r) - Re(alpha^2e^(-i theta))sinh(2r), abs(alpha)^4)\
+           &= 3(frac(sinh^2(r), abs(alpha)^2))^2 + 2frac(sinh^2(r), abs(alpha)^2) - cos(2phi - theta)frac(sinh(2r), abs(alpha)^2)\
+           &approx -cos(2phi - theta)sinh(2r)/abs(alpha)^2
+$
+
+From this expression we can see that in this limit, if $r > 0$, we eventually get $g^((2))(0) < 1$ i.e. photon anti-bunching and sub poisonnian photon statistics,
+and for $r < 0$ we also get $g^((2))(0) > 1$ i.e. photon bunching and super poissonian photon statistics. 
